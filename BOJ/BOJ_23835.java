@@ -16,9 +16,7 @@ public class BOJ_23835 {
     static int[] counts;
     static void dfs(int curr, int dest, int parent, int order) {
         if (curr == dest) {
-            for (Pair pair : used) {
-                tracings.add(pair);
-            }
+            tracings.addAll(used);
             return;
         }
         for (int next : adj.get(curr)) {
